@@ -1,0 +1,3 @@
+bruger 4096 dybde
+
+omkring 10% util
