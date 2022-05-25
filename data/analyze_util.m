@@ -35,11 +35,11 @@ bitFileSize5 =5668215;
 util5=44.45;
 
 
-mean1=mean(delta_t1)
-mean2=mean(delta_t2)
-mean3=mean(delta_t3)
-mean4=mean(delta_t4)
-mean5=mean(delta_t5)
+mean1=mean(delta_t1);
+mean2=mean(delta_t2);
+mean3=mean(delta_t3);
+mean4=mean(delta_t4);
+mean5=mean(delta_t5);
 
 delta_t=[delta_t1(1:600,:),delta_t2(1:600,:),delta_t3(1:600,:),delta_t4(1:600,:),delta_t5(1:600,:)];
 
@@ -52,6 +52,9 @@ plot(x,y,'-o')
 title("Utilization/Reconfiguration time")
 xlabel('Utilization of LUTRAM [%]')
 ylabel('Reconfiguration time[ms]')
+yticks([round(min(y),2):0.01:round(max(y),2)]);
+
+%hist(delta_t1)
 
 %bins=15;
 %subplot(3,2,1);
@@ -65,4 +68,3 @@ ylabel('Reconfiguration time[ms]')
 %subplot(3,2,5);
 %    hist(delta_t5,bins);
 %subplot(3,2,6);
-%    plot(x,y);
