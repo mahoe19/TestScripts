@@ -115,20 +115,26 @@ mean63=mean(delta_t63);
 y=[mean24,mean26,mean28,mean30,mean32,mean34,mean36,mean38,mean40,mean42,mean44,mean46,mean48,mean50,mean53,mean57,mean60,mean63];
 x=[24,26,28,30,32,34,36,38,40,42,44,46,48,50,53,57,60,63];
 
+delta_x = x'\y';
+yCalc1 = delta_x*x;
+mdl = fitlm(x,y);
 figure
-plot(x,y,'-o')
+scatter(x,y,'X')
+hold on
+plot(mdl);
 title("Temperature/Reconfiguration time")
 xlabel('Temperature[C]')
 ylabel('Reconfiguration time[ms]')
-yticks([round(min(y),2):0.01:round(max(y),2)]);
+yticks([round(min(y),2):0.02:round(max(y),2)]);
 
-x_pdf = [8.5:0.001:8.8];
-pd = fitdist(delta_t60,'Normal')
-y = pdf(pd,x_pdf);
+anova(mdl,'summary')
+%x_pdf = [8.5:0.001:8.8];
+%pd = fitdist(delta_t60,'Normal')
+%y = pdf(pd,x_pdf);
  
-figure
-histogram(delta_t60,'Normalization','pdf')
-line(x_pdf,y);
+%figure
+%histogram(delta_t60,'Normalization','pdf')
+%line(x_pdf,y);
 
 %bins=15;
 %subplot(3,2,1);

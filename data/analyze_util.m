@@ -53,6 +53,7 @@ title("Utilization/Reconfiguration time")
 xlabel('Utilization of LUTRAM [%]')
 ylabel('Reconfiguration time[ms]')
 yticks([round(min(y),2):0.01:round(max(y),2)]);
+grid on;
 
 %hist(delta_t1)
 
