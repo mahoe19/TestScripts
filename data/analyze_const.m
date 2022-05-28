@@ -1,4 +1,3 @@
-clear
 total_LUT=70560;
 total_LUTRAM=28800;
 total_FF=141120;
@@ -60,7 +59,7 @@ mean6=mean(delta_t6);
 mean7=mean(delta_t7);
 
 
-%delta_t=[delta_t05(1:600,:),delta_t10(1:600,:),delta_t25(1:600,:),delta_t30(1:600,:),delta_t35(1:600,:)];
+delta_tconst=[delta_t2;delta_t3; delta_t4; delta_t5; delta_t6; delta_t7];
 
 means=[mean2,mean3,mean4,mean5,mean6,mean7];
 %x=[bitFileSize1,bitFileSize2,bitFileSize3,bitFileSize4,bitFileSize5];

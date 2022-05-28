@@ -108,7 +108,7 @@ mean57=mean(delta_t57);
 mean60=mean(delta_t60);
 mean63=mean(delta_t63);
 
-delta_tt=[delta_t24; delta_t26; delta_t28; delta_t30; delta_t32;delta_t34; delta_t36; delta_t38; delta_t40; delta_t42; delta_t44; delta_t46; delta_t48;delta_t50; delta_t53; delta_t57; delta_t60; delta_t63];
+delta_tt=[delta_t24; delta_t26; delta_t28; delta_t30; delta_t32;delta_t34; delta_t36; delta_t38; delta_t40; delta_t42; delta_t44; delta_t46; delta_t32;delta_t34; delta_t36; delta_t38; delta_t40; delta_t42;];
 
 y=[mean24,mean26,mean28,mean30,mean32,mean34,mean36,mean38,mean40,mean42,mean44,mean46,mean48,mean50,mean53,mean57,mean60,mean63];
 x=[24,26,28,30,32,34,36,38,40,42,44,46,48,50,53,57,60,63];

@@ -1,4 +1,3 @@
-clear
 total_LOT=70560;
 delta_t05=readmatrix("changing_pBlock/05with_delta_t.csv");
 delta_t05=delta_t05(:,1);
@@ -122,7 +121,7 @@ mean65=mean(delta_t65);
 mean70=mean(delta_t70);
 mean75=mean(delta_t75);
 
-%delta_t=[delta_t05(1:600,:),delta_t10(1:600,:),delta_t25(1:600,:),delta_t30(1:600,:),delta_t35(1:600,:)];
+delta_tp=[delta_t10; delta_t15; delta_t25; delta_t30; delta_t40; delta_t45; delta_t50; delta_t55; delta_t60; delta_t65; delta_t70; delta_t75];
 
 means=[mean05,mean10,mean15,mean20,mean25,mean30,mean35,mean40,mean45,mean50,mean55,mean60,mean65,mean70,mean75];
 %x=[bitFileSize1,bitFileSize2,bitFileSize3,bitFileSize4,bitFileSize5];
