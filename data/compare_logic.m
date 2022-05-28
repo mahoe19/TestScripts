@@ -12,7 +12,7 @@ delta_tlogic=delta_tlogic*1000;
 mean_debug = mean(delta_tdebug)
 mean_logic = mean(delta_tlogic)
 
-bins=20;
+bins=25;
 
 subplot(1,2,1);
     hist(delta_tdebug,bins)
