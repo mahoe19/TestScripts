@@ -134,7 +134,19 @@ plot(percent,means,'-o')
 title("Percentage usage of LUT/Reconfiguration time")
 xlabel('Percentage of LUT inside P-Block [%]')
 ylabel('Reconfiguration time[ms]')
-%yticks([round(min(means),2):0.01:round(max(means),2)]);
+yticks([round(min(means),0):0.5:round(max(means),0)]);
+
+delta_x = fileSize'\means';
+yCalc1 = delta_x*fileSize;
+mdl = fitlm(fileSize,means);
+figure
+scatter(fileSize,means,'X')
+hold on
+plot(mdl);
+title("File Size/Reconfiguration time")
+xlabel('File size[mB]')
+ylabel('Reconfiguration time[ms]')
+yticks([round(min(means),0):0.5:round(max(means),0)]);
 
 figure
 plot(fileSize,means,'-o')
