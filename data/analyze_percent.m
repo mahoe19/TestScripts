@@ -121,12 +121,14 @@ mean65=mean(delta_t65);
 mean70=mean(delta_t70);
 mean75=mean(delta_t75);
 
-delta_tp=[delta_t10; delta_t15; delta_t25; delta_t30; delta_t40; delta_t45; delta_t50; delta_t55; delta_t60; delta_t65; delta_t70; delta_t75];
+delta_tp=[delta_t05;delta_t10; delta_t15; delta_t25; delta_t30; delta_t40; delta_t45; delta_t50; delta_t55; delta_t60; delta_t65; delta_t70; delta_t75];
 
 means=[mean05,mean10,mean15,mean20,mean25,mean30,mean35,mean40,mean45,mean50,mean55,mean60,mean65,mean70,mean75];
+means_p=means;
 %x=[bitFileSize1,bitFileSize2,bitFileSize3,bitFileSize4,bitFileSize5];
 percent=[percent05,percent10,percent15,percent20,percent25,percent30,percent35,percent40,percent45,percent50,percent55,percent60,percent65,percent70,percent75];
 fileSize=[bitFileSize05,bitFileSize10,bitFileSize15,bitFileSize20,bitFileSize25,bitFileSize30,bitFileSize35,bitFileSize40,bitFileSize45,bitFileSize50,bitFileSize55,bitFileSize60,bitFileSize65,bitFileSize70,bitFileSize75];
+fileS_p=fileSize/1000000;
 
 figure
 plot(percent,means,'-o')

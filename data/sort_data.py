@@ -1,6 +1,6 @@
 import csv
 from operator import mod
-with open('const_redo/const7.csv', 'r') as inp, open('const_redo/with_delta_t_const7.csv', 'w') as out:
+with open('Full_recon/full_recon.csv', 'r') as inp, open('Full_recon/with_delta_t_full_recon.csv', 'w') as out:
     writer = csv.writer(out)
     for row in csv.reader(inp):
         if row[1] != "0":

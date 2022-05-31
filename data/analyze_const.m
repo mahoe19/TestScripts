@@ -1,7 +1,7 @@
 total_LUT=70560;
 total_LUTRAM=28800;
 total_FF=141120;
-bitFileSize05=1611859;
+bitFileSize=5746551;
 
 delta_t2=readmatrix("const_redo/with_delta_t_const2.csv");
 delta_t2=delta_t2(:,1);
@@ -62,11 +62,15 @@ mean7=mean(delta_t7);
 delta_tconst=[delta_t2;delta_t3; delta_t4; delta_t5; delta_t6; delta_t7];
 
 means=[mean2,mean3,mean4,mean5,mean6,mean7];
-%x=[bitFileSize1,bitFileSize2,bitFileSize3,bitFileSize4,bitFileSize5];
+means_c=means;
+fileS_c=[bitFileSize,bitFileSize,bitFileSize,bitFileSize,bitFileSize,bitFileSize];
+fileS_c=fileS_c/1000000;
+%plot(fileS_const,means_const)
+
 LUTp=[LUTp2,LUTp3,LUTp4,LUTp5,LUTp6,LUTp7];
 LUTRAMp=[LUTRAMp2,LUTRAMp3,LUTRAMp4,LUTRAMp5,LUTRAMp6,LUTRAMp7];
 FFp=[FFp2,FFp3,FFp4,FFp5,FFp6,FFp7];
-FFp=sort(FFp)
+FFp=sort(FFp);
 
 figure
 plot(LUTp,means,'-o')
